@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Simple library for logging to syslog.
 # By default it uses `user` facility, but you can override it by setting
 # `LOG_FACILITY` variable. A second variable `LOG_TAG` is used to
@@ -21,12 +23,12 @@
 #   alert "This is alert"
 #
 
-emerg() {
+emerg () {
     LOG_FACILITY=${LOG_FACILITY:-user}
-    logger -si -p $LOG_FACILITY.emerg -t $LOG_TAG $@
+    logger -si -p $LOG_FACILITY.emerg -t $LOG_TAG $1
 }
 
-alert() {
+alerte() {
     LOG_FACILITY=${LOG_FACILITY:-user}
     logger -si -p $LOG_FACILITY.alert -t $LOG_TAG $@
 }
@@ -53,7 +55,7 @@ notice() {
 
 info() {
     LOG_FACILITY=${LOG_FACILITY:-user}
-    logger -si -p $LOG_FACILITY.info -t $LOG_TAG $@
+    logger -si -p $LOG_FACILITY.info -t $LOG_TAG $1
 }
 
 debug() {
