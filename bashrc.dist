@@ -1,0 +1,5 @@
+# Add local binaries to PATH
+export PATH="$PATH:$HOME/.local/bin"
+
+# Add neovim binary
+export PATH="$PATH:$HOME/.local/tools/nvim-linux64/bin/"
