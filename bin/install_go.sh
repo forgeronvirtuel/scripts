@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_TAG=${LOG_TAG:-$(pwd)/$0}
+LOG_TAG=${LOG_TAG:-$0}
 
 # Exit script as soon as a command fails.
 if [[ "$SCRIPT_EXIT_ON_ERROR" == "true" ]]; then

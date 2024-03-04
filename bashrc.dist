@@ -1,5 +1,16 @@
+#!/bin/bash
+
+# Environment definition
+export SCRIPTS_PATH="${HOME}/dev/scripts"
+
 # Add local binaries to PATH
 export PATH="$PATH:$HOME/.local/bin"
 
 # Add neovim binary
 export PATH="$PATH:$HOME/.local/tools/nvim-linux64/bin/"
+
+# Add my script as executable
+export PATH="$PATH:${SCRIPTS_PATH}/bin"
+
+# Add neovim (> v0.9)
+export PATH="/home/ubuntu/.local/bin/nvim-linux64/bin:$PATH"
